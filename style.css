@@ -1,3 +1,7 @@
+/* =========================
+   GLOBAL
+========================= */
+
 *{
   margin:0;
   padding:0;
@@ -11,6 +15,7 @@ img{
 body{
   font-family:'Poppins', sans-serif;
   background:#f4f7fc;
+  color:#222;
 }
 
 .container{
@@ -18,17 +23,22 @@ body{
   min-height:100vh;
 }
 
-/* LEFT SIDE */
+
+/* =========================
+   FORM SECTION
+========================= */
+
 .form-section{
   width:35%;
-  background:white;
+  background:#fff;
   padding:40px;
-  box-shadow:0 0 10px rgba(0,0,0,0.1);
+  box-shadow:0 0 10px rgba(0,0,0,0.08);
+  overflow-y:auto;
 }
 
 .form-section h2{
   margin-bottom:30px;
-  color:#333;
+  color:#222;
 }
 
 .form-section input,
@@ -36,9 +46,10 @@ body{
   width:100%;
   padding:14px;
   margin-bottom:20px;
-  border:1px solid #ccc;
+  border:1px solid #dcdcdc;
   border-radius:10px;
-  font-size:16px;
+  font-size:15px;
+  font-family:'Poppins', sans-serif;
   outline:none;
 }
 
@@ -47,54 +58,312 @@ body{
   resize:none;
 }
 
-/* RIGHT SIDE */
+
+/* =========================
+   BUTTONS
+========================= */
+
+#downloadBtn,
+#printBtn,
+#clearBtn{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:10px;
+  font-size:15px;
+  font-weight:500;
+  cursor:pointer;
+  margin-top:15px;
+  transition:0.3s;
+  color:white;
+}
+
+#downloadBtn,
+#printBtn{
+  background:#2563eb;
+}
+
+#downloadBtn:hover,
+#printBtn:hover{
+  background:#1d4ed8;
+}
+
+#clearBtn{
+  background:#dc2626;
+}
+
+#clearBtn:hover{
+  background:#b91c1c;
+}
+
+
+/* =========================
+   SECTION HEADERS
+========================= */
+
+.section-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+  gap:10px;
+}
+
+.section-title button{
+  background:#2563eb;
+  color:white;
+  border:none;
+  padding:10px 14px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+
+/* =========================
+   GROUP BOXES
+========================= */
+
+.education-group,
+.experience-group,
+.reference-group{
+  border:1px solid #ddd;
+  border-radius:10px;
+  padding:15px;
+  margin-bottom:20px;
+}
+
+
+/* =========================
+   PREVIEW SECTION
+========================= */
+
 .preview-section{
   width:65%;
   display:flex;
   justify-content:center;
-  align-items:center;
+  align-items:flex-start;
   padding:40px;
+  overflow:auto;
 }
+
+
+/* =========================
+   CV PREVIEW
+========================= */
 
 .cv-preview{
   width:100%;
-  max-width:900px;
-  min-height:297mm;
+  max-width:850px;
   background:white;
-  padding:12mm;
+  padding:40px;
   border-radius:10px;
-  box-shadow:0 0 20px rgba(0,0,0,0.1);
-  color:#222;
-  line-height:1.4;
+  box-shadow:0 0 20px rgba(0,0,0,0.08);
+  overflow:hidden;
+  word-wrap:break-word;
+  line-height:1.5;
 }
 
 .cv-preview *{
-  page-break-inside: avoid;
+  page-break-inside:avoid;
 }
+
+
+/* =========================
+   TYPOGRAPHY
+========================= */
 
 .cv-preview h1{
   font-size:42px;
-  color:#222;
+  margin-bottom:5px;
+  color:#111;
+  word-break:break-word;
+}
+
+.cv-preview h2{
+  font-size:24px;
+  margin-bottom:15px;
+  color:#111;
+  word-break:break-word;
 }
 
 .cv-preview h3{
-  margin-top:10px;
-  color:#666;
+  font-size:18px;
+  margin-bottom:5px;
+  color:#111;
+  word-break:break-word;
+}
+
+.cv-preview h4{
+  font-size:16px;
+  margin-bottom:5px;
+  color:#2563eb;
   font-weight:500;
+  word-break:break-word;
+}
+
+.cv-preview p,
+.cv-preview span{
+  word-break:break-word;
 }
 
 .cv-preview p{
   margin-top:8px;
-  line-height:1.7;
   color:#444;
+  line-height:1.6;
+}
+
+.cv-preview span{
+  font-size:14px;
+  color:#777;
 }
 
 .info{
+  margin-top:20px;
+}
+
+
+/* =========================
+   SECTION SPACING
+========================= */
+
+.skills-section,
+.education-section,
+.experience-section,
+.reference-section{
   margin-top:30px;
 }
 
-/* MOBILE */
-/* MOBILE RESPONSIVE */
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-container{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.skills-container span{
+  background:#2563eb;
+  color:white;
+  padding:8px 14px;
+  border-radius:30px;
+  font-size:13px;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education-item{
+  margin-bottom:20px;
+}
+
+.education-item p{
+  margin:0;
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience-item{
+  margin-bottom:25px;
+}
+
+.experience-item p{
+  margin-top:10px;
+}
+
+
+/* =========================
+   EXPERIENCE TEXTAREA
+========================= */
+
+.experience-group textarea{
+  width:100%;
+  height:100px;
+  margin-top:15px;
+  padding:14px;
+  border:1px solid #ccc;
+  border-radius:10px;
+  resize:none;
+  font-size:15px;
+  font-family:'Poppins', sans-serif;
+}
+
+
+/* =========================
+   REFERENCES
+========================= */
+
+.reference-item{
+  margin-bottom:25px;
+}
+
+.reference-item p{
+  margin:5px 0;
+}
+
+
+/* =========================
+   PDF MODE
+========================= */
+
+.pdf-mode .preview-section{
+  padding:0 !important;
+  overflow:visible !important;
+}
+
+.pdf-mode .cv-preview{
+  width:210mm !important;
+  min-height:297mm !important;
+  max-width:210mm !important;
+  padding:15mm !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  background:white !important;
+}
+
+
+/* =========================
+   PRINT
+========================= */
+
+@media print{
+
+  body{
+    background:white;
+  }
+
+  .form-section{
+    display:none;
+  }
+
+  .preview-section{
+    width:100%;
+    padding:0;
+    overflow:visible;
+  }
+
+  .cv-preview{
+    width:100%;
+    max-width:none;
+    box-shadow:none;
+    border-radius:0;
+    padding:20mm;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:900px){
 
@@ -106,11 +375,12 @@ body{
     flex-direction:column;
   }
 
-  /* FORM SECTION */
+  /* FORM */
 
   .form-section{
     width:100%;
     padding:20px;
+    box-shadow:none;
   }
 
   .form-section h2{
@@ -127,29 +397,29 @@ body{
   /* BUTTONS */
 
   #downloadBtn,
+  #printBtn,
   #clearBtn{
+    font-size:14px;
     padding:14px;
-    font-size:15px;
   }
 
-  /* PREVIEW SECTION */
+  /* PREVIEW */
 
   .preview-section{
     width:100%;
     padding:15px;
-    overflow-x:auto;
+    overflow:hidden;
   }
-
-  /* CV PREVIEW */
 
   .cv-preview{
     width:100%;
+    max-width:100%;
     min-height:auto;
     padding:20px;
     border-radius:8px;
   }
 
-  /* HEADINGS */
+  /* TEXT */
 
   .cv-preview h1{
     font-size:28px;
@@ -170,246 +440,20 @@ body{
   .cv-preview p,
   .cv-preview span{
     font-size:14px;
-    line-height:1.5;
   }
 
   /* SKILLS */
 
   .skills-container span{
-    padding:8px 14px;
     font-size:12px;
+    padding:7px 12px;
   }
 
-  /* SECTION TITLE */
-
-  .section-title{
-    gap:10px;
-  }
+  /* SECTION BUTTON */
 
   .section-title button{
-    padding:8px 12px;
     font-size:13px;
+    padding:8px 12px;
   }
 
-}
-
-/* SKILLS SECTION */
-
-.skills-section{
-  margin-top:25px;
-}
-
-.skills-section h2{
-  margin-bottom:20px;
-  color:#222;
-}
-
-.skills-container{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-}
-
-.skills-container span{
-  background:#2563eb;
-  color:white;
-  padding:10px 18px;
-  border-radius:30px;
-  font-size:14px;
-}
-
-/* EDUCATION SECTION */
-
-.education-section{
-  margin-top:25px;
-}
-
-.education-section h2{
-  margin-bottom:20px;
-  color:#222;
-}
-
-.education-item{
-  margin-bottom:20px;
-}
-
-.education-item h3{
-  color:#111;
-  margin-bottom:5px;
-}
-
-.education-item p{
-  margin:0;
-  color:#555;
-}
-
-.education-item span{
-  color:#777;
-  font-size:14px;
-}
-
-.section-title{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:20px;
-}
-
-.section-title button{
-  background:#2563eb;
-  color:white;
-  border:none;
-  padding:10px 16px;
-  border-radius:8px;
-  cursor:pointer;
-}
-
-.education-group{
-  margin-bottom:20px;
-  padding:15px;
-  border:1px solid #ddd;
-  border-radius:10px;
-}
-
-/* EXPERIENCE SECTION */
-
-.experience-section{
-  margin-top:25px;
-}
-
-.experience-item{
-  margin-bottom:25px;
-}
-
-.experience-item h3{
-  color:#111;
-  margin-bottom:5px;
-}
-
-.experience-item h4{
-  color:#2563eb;
-  margin-bottom:5px;
-  font-weight:500;
-}
-
-.experience-item span{
-  font-size:14px;
-  color:#777;
-}
-
-.experience-item p{
-  margin-top:10px;
-  color:#444;
-  line-height:1.6;
-}
-
-.experience-group{
-  margin-bottom:20px;
-  padding:15px;
-  border:1px solid #ddd;
-  border-radius:10px;
-}
-
-.experience-group textarea{
-  width:100%;
-  padding:14px;
-  margin-top:15px;
-  border:1px solid #ccc;
-  border-radius:10px;
-  resize:none;
-  height:100px;
-  font-size:16px;
-}
-
-/* REFERENCE SECTION */
-
-.reference-section{
-  margin-top:25px;
-}
-
-.reference-item{
-  margin-bottom:25px;
-}
-
-.reference-item h3{
-  color:#111;
-  margin-bottom:5px;
-}
-
-.reference-item h4{
-  color:#2563eb;
-  margin-bottom:5px;
-  font-weight:500;
-}
-
-.reference-item p{
-  margin:5px 0;
-  color:#555;
-}
-
-.reference-group{
-  margin-bottom:20px;
-  padding:15px;
-  border:1px solid #ddd;
-  border-radius:10px;
-}
-
-/* DOWNLOAD BUTTON */
-
-#downloadBtn{
-  width:100%;
-  padding:15px;
-  background:#2563eb;
-  color:white;
-  border:none;
-  border-radius:10px;
-  font-size:16px;
-  cursor:pointer;
-  margin-top:20px;
-  transition:0.3s;
-}
-
-#downloadBtn:hover{
-  background:#1d4ed8;
-}
-
-@media print {
-
-  body{
-    background:white;
-  }
-
-  .form-section{
-    display:none;
-  }
-
-  .preview-section{
-    width:100%;
-    padding:0;
-  }
-
-  .cv-preview{
-    box-shadow:none;
-    border-radius:0;
-  }
-
-}
-
-/* CLEAR BUTTON */
-
-#clearBtn{
-  width:100%;
-  padding:15px;
-  background:#dc2626;
-  color:white;
-  border:none;
-  border-radius:10px;
-  font-size:16px;
-  cursor:pointer;
-  margin-top:15px;
-  transition:0.3s;
-}
-
-#clearBtn:hover{
-  background:#b91c1c;
 }
